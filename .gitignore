@@ -1,0 +1,8 @@
+__pycache__
+storage
+venv
+
+auth/__pycache__
+views/__pycache__
+
+.env
