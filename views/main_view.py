@@ -6,7 +6,7 @@ class MainView:
 
     def get_view(self):
         return ft.View(
-            route='/profile',
+            route='/',
             vertical_alignment=ft.MainAxisAlignment.CENTER,
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
             controls=[

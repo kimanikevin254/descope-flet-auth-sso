@@ -7,7 +7,7 @@ class ProfileView:
 
     def get_view(self):
         return ft.View(
-            route='/',
+            route='/profile',
             vertical_alignment=ft.MainAxisAlignment.CENTER,
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
             controls=[
@@ -15,13 +15,12 @@ class ProfileView:
                     alignment=ft.MainAxisAlignment.CENTER,
                     horizontal_alignment=ft.CrossAxisAlignment.CENTER,
                     controls=[
-                        ft.CircleAvatar(
-                            foreground_image_src=self.page.auth.user.get("picture", ""),
-                            bgcolor=ft.Colors.GREY_400,
-                            radius=40
+                        ft.Text("Profile age", size=30, weight=ft.FontWeight.BOLD),
+                        ft.Text(
+                            "This is the profile page",
+                            size=18,
+                            weight=ft.FontWeight.W_500,
                         ),
-                        ft.Text(value=self.page.auth.user.get("name", "N/A"), size=20, weight=ft.FontWeight.BOLD),
-                        ft.Text(value=self.page.auth.user.get("email", "N/A"), size=18),
                         ft.ElevatedButton(text="Logout", on_click=self.handle_logout),
                     ],
                 )

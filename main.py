@@ -1,6 +1,5 @@
 import flet as ft
 
-from auth.auth_provider import OAuthProvider
 from auth.auth_helpers import AuthManager
 from views.main_view import MainView
 from views.profile_view import ProfileView
@@ -11,21 +10,15 @@ class MyApp:
         self.page.theme_mode = ft.ThemeMode.LIGHT
         self.page.title = "Demo Application"
 
-        self.page.oauth_provider = OAuthProvider()
         self.auth_manager = AuthManager(page=self.page)
-        
 
         self.page.on_route_change = self.route_handler
         self.page.on_view_pop = self.view_pop
-        self.page.on_login = self.auth_manager.on_login
-        self.page.on_logout = self.auth_manager.on_logout
 
     def route_handler(self, route):
         self.page.views.clear()
 
         if self.page.route == '/profile':
-            if(self.page.auth is None):
-                return self.page.go(route='/')
             view = ProfileView(self.page, self.auth_manager.handle_logout)
             self.page.views.append(view.get_view())
         else:
