@@ -8,7 +8,7 @@ To run this project locally:
 
 1. Follow along with the article to configure Descope and Okta and retrieve all the necessary credentials.
 
-2. Clone this repo, `cd` into the project root folder, and install all the dependencies:
+2. Clone this repo, `cd` into the project root folder, create a virtual environment, activate it and install all the dependencies:
 
     ```bash
     git clone --single-branch -b main https://github.com/kimanikevin254/descope-flet-auth-sso.git
