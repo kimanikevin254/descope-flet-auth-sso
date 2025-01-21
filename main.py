@@ -11,8 +11,8 @@ class MyApp:
         self.page.theme_mode = ft.ThemeMode.LIGHT
         self.page.title = "Demo Application"
 
-        self.oauth_provider = OAuthProvider()
-        self.auth_manager = AuthManager(oauth_provider=self.oauth_provider, page=page)
+        self.page.oauth_provider = OAuthProvider()
+        self.auth_manager = AuthManager(page=self.page)
         
 
         self.page.on_route_change = self.route_handler

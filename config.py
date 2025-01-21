@@ -18,5 +18,6 @@ class Config:
     OAUTH_USER_ENDPOINT = get_env_var('OAUTH_USER_ENDPOINT')
     OAUTH_REDIRECT_URI = get_env_var('OAUTH_REDIRECT_URI')
     OAUTH_USER_ID_FIELD = get_env_var('OAUTH_USER_ID_FIELD')
+    OAUTH_SCOPES = get_env_var('OAUTH_SCOPES') 
     OAUTH_TOKEN_SECRET = get_env_var('OAUTH_TOKEN_SECRET')
     OAUTH_TOKEN_KEY = get_env_var('OAUTH_TOKEN_KEY')
