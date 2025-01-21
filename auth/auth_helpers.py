@@ -2,15 +2,10 @@ from flet import Page, LoginEvent
 from flet.security import encrypt, decrypt
 from config import Config
 
-SECRET_KEY="MySuperSecr3t!" 
-TOKEN_KEY="myapp.auth_token"
-
 class AuthManager:
     def __init__(self, oauth_provider, page: Page):
         self.page = page
         self.oauth_provider = oauth_provider
-        self.secret_key = SECRET_KEY
-        self.token_key = TOKEN_KEY
 
     def on_login(self, e: LoginEvent):
         if e.error:
